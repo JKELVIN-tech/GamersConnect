@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#100B0B" />
+    <title>GamerConnect — Kenya's gaming corner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
+    <style>
+      /* Matches src/theme.css .splash-screen — shown instantly, before the JS bundle
+         even loads, so there's no blank white flash. React's own SplashScreen replaces
+         this the moment it mounts; #boot-splash is removed automatically at that point
+         since React takes over #root's contents. */
+      html,body{background:#100B0B;margin:0;}
+      #boot-splash{
+        position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;
+        justify-content:center;gap:10px;background:#100B0B;font-family:sans-serif;
+      }
+      #boot-splash .logo{font-family:'Bungee',cursive;font-size:30px;color:#E8DEDA;}
+      #boot-splash .logo span{color:#8C3A3A;}
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="boot-splash">
+        <div class="logo">Gamer<span>Connect</span></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
