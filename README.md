@@ -4,7 +4,7 @@ A gaming community web application for discovering players, discussing games, sh
 
 ## Overview
 
-GamersConnect is a React-based frontend designed around a social gaming experience. The current application includes authentication, player discovery, gaming categories, forums, clips, profiles, and connection features.
+GamersConnect is a React-based frontend for a social gaming experience. It includes authentication, player discovery, game categories, forums, clips, profiles, and gamer connections.
 
 ## Tech Stack
 
@@ -22,8 +22,7 @@ GamersConnect is a React-based frontend designed around a social gaming experien
 - Gamer profiles
 - Player connections
 - Gaming forums and replies
-- Gaming clips and comments
-- Clip likes
+- Gaming clips, comments, and likes
 - Linked gaming accounts
 - Responsive navigation and mobile-oriented UI
 
@@ -48,39 +47,28 @@ GamersConnect/
 
 ## Getting Started
 
-### 1. Install dependencies
-
 ```bash
 npm install
-```
-
-### 2. Configure the backend
-
-The frontend expects its API under `/api`. In development, the Vite configuration proxies this path to the local backend.
-
-Do not commit API credentials, tokens, environment files, or generated dependency directories.
-
-### 3. Start the development server
-
-```bash
 npm run dev
 ```
 
-### 4. Build for production
+For a production build:
 
 ```bash
 npm run build
 ```
 
+The frontend expects API routes under `/api`. During development, Vite proxies these routes to the local backend.
+
 ## Security Notes
 
-- Authentication tokens are currently stored in browser `localStorage`; a production deployment should consider a secure, appropriately configured cookie-based session strategy where practical.
-- Public frontend code must never contain private API secrets.
-- Upload authorization, file type validation, storage permissions, and API authorization must be enforced by the backend rather than trusted to the frontend.
+- Authentication tokens are currently stored in browser `localStorage`. A production deployment should consider a secure cookie-based session strategy where practical.
+- Never commit API credentials, private tokens, environment files, or generated dependency directories.
+- Upload authorization, file-type validation, storage permissions, and API authorization must be enforced by the backend.
 
 ## Development
 
-This repository contains the frontend client. Backend endpoints are expected to be provided separately and are not bundled into this repository.
+This repository contains the frontend client. The backend is maintained separately.
 
 ## License
 
