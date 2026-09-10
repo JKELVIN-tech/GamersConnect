@@ -64,7 +64,6 @@ export const api = {
   unlinkAccount: (platform) => request(`/linked-accounts/${encodeURIComponent(platform)}`, { method: 'DELETE' }),
 };
 
-// Uploads a video file straight to storage using a presigned URL, bypassing the API server.
 export async function uploadClipFile(file) {
   const { uploadUrl, publicUrl } = await api.getUploadUrl(file.name, file.type);
   const res = await fetch(uploadUrl, {
